@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_settings"
+        android:icon="@drawable/ic_cube"
+        android:title="@string/menu_settings" />
+
+    <item
+        android:id="@+id/menu_profile"
+        android:icon="@drawable/ic_dragon"
+        android:title="@string/menu_profile" />
+
+    <item
+        android:id="@+id/file"
+
+        android:icon="@drawable/ic_cube"
+        android:title="@string/menu_file">
+        <menu>
+            <item
+                android:id="@+id/menu_file_create"
+                android:title="New" />
+            <item
+                android:id="@+id/menu_file_open"
+                android:title="Open" />
+        </menu>
+    </item>
+
+
+</menu>
