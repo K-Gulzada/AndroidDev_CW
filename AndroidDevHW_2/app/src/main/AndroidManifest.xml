@@ -33,7 +33,8 @@
             </intent-filter>
         </activity>
 
-        <service android:name=".lesson_6.TestService"/>
+        <!--<service android:name=".lesson_6.TestService"/>-->
+        <service android:name=".lesson_6.TestForegroundService"/>
     </application>
 
 </manifest>
