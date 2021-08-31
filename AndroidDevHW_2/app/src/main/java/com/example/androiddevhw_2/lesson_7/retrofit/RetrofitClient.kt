@@ -22,9 +22,9 @@ object RetrofitClient {
         .create(ApiService::class.java)
 
 
-    fun getusers(): Observable<Users> = this.service.getUsers()
+    fun getUsers(): Observable<Users> = this.service.getUsers()
 
-    fun createusers(user: User): Observable<User> = this.service.CreateUser(user)
+    fun createUsers(user: User): Observable<User> = this.service.CreateUser(user)
 
 
     private val httpClient: OkHttpClient
