@@ -56,7 +56,7 @@ class FinishFragment : Fragment() {
 
 class FinishFragment : Fragment() {
     
-    val args: FinishFragmentArgs by navArgs()
+    //val args: FinishFragmentArgs by navArgs()
     private lateinit var binding: FragmentFinishBinding
   
     override fun onCreateView(
@@ -68,12 +68,12 @@ class FinishFragment : Fragment() {
         return  binding.root
     }
 
-    override fun onStart() {
+   /* override fun onStart() {
         super.onStart()
       binding.title.text = args.title
         binding.subtitle.text = args.subtitle?:"default subtitle text"
       
-    }
+    }*/
 }
 
 // создать третий фрагмент A -> B -> C -> A

@@ -71,14 +71,14 @@ class StartFragment : Fragment() {
     }
 
 
-    override fun onStart() {
+   /* override fun onStart() {
         super.onStart()
 
         this.view?.findViewById<Button>(R.id.start_fragment_btn)?.setOnClickListener{
             val action = StartFragmentDirections.actionStartFragmentToFinishFragment("Just text", null )
             findNavController().navigate(action)
         }
-    }
+    }*/
 }
 
 // 4 самых важных компонентов андройд

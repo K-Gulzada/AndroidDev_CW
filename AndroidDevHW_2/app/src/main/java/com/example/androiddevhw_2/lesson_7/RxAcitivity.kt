@@ -15,6 +15,9 @@ import io.reactivex.Observer
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
+import kotlinx.serialization.json.Json
+import kotlinx.serialization.decodeFromString
+
 
 import kotlin.collections.ArrayList
 
@@ -24,34 +27,50 @@ import kotlin.collections.ArrayList
 class RxAcitivity : AppCompatActivity() {
     private lateinit var recyclerView: RecyclerView
     private lateinit var progressBar: ProgressBar
-    private val adapter:RecyclerAdapter = RecyclerAdapter()
+    private val adapter: RecyclerAdapter = RecyclerAdapter()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_rx_acitivity)
         recyclerView = findViewById(R.id.recycler_view)
         progressBar = findViewById(R.id.progress_bar)
 
-        findViewById<Button>(R.id.create_user_btn).setOnClickListener{
+        findViewById<Button>(R.id.create_user_btn).setOnClickListener {
 
         }
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = adapter
 
-        fetchUsers()
+        //fetchUsers()
+
+        // 01.09.21
+
+        //fetchUsers наверху закоментим
+        val userString = intent.getStringExtra(USER)
+        val user = Json.decodeFromString<User>(
+            userString ?: throw Exception("User not Found")
+        )
+        println("ACADEMY $userString")
+        adapter.setData(arrayListOf(user))
+
     }
 
-    private fun fetchUsers(){
+    //01.09.21================================================
+    companion object {
+        const val USER = "user"
+    }
+    //================================================
+
+    private fun fetchUsers() {
         progressBar.visibility = View.VISIBLE
         RetrofitClient.getUsers()
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
-            .subscribe(object: Observer<Users> {
+            .subscribe(object : Observer<Users> {
                 override fun onSubscribe(d: Disposable) {
-                    TODO("Not yet implemented")
                 }
 
                 override fun onNext(t: Users) {
-                   setUsers(t.data)
+                    setUsers(t.data)
                 }
 
                 override fun onError(e: Throwable) {
@@ -65,11 +84,11 @@ class RxAcitivity : AppCompatActivity() {
             })
     }
 
-    private fun hideProgress(){
+    private fun hideProgress() {
         progressBar.visibility = View.GONE
     }
 
-    private fun setUsers(list:ArrayList<User>){
+    private fun setUsers(list: ArrayList<User>) {
         adapter.setData(list)
     }
 }

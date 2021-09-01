@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidDevHW_2">
         <activity
+            android:name=".lesson_7.RxRegisterActivity"
+            android:exported="true" />
+        <activity
             android:name=".lesson_7.RxAcitivity"
             android:exported="true" />
         <activity
