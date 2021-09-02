@@ -5,18 +5,20 @@
       <map>
         <entry key="..\:/Users/itstart/Desktop/AndroidDevHW_2/AndroidDevHW_2/app/src/main/res/drawable/rounded_curve_shape.xml" value="0.3828125" />
         <entry key="..\:/Users/itstart/Desktop/AndroidDevHW_2/AndroidDevHW_2/app/src/main/res/layout/activity_binding.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/itstart/Desktop/AndroidDevHW_2/AndroidDevHW_2/app/src/main/res/layout/activity_coroutine.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/itstart/Desktop/AndroidDevHW_2/AndroidDevHW_2/app/src/main/res/layout/activity_fragment.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/itstart/Desktop/AndroidDevHW_2/AndroidDevHW_2/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/itstart/Desktop/AndroidDevHW_2/AndroidDevHW_2/app/src/main/res/layout/activity_menu.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/itstart/Desktop/AndroidDevHW_2/AndroidDevHW_2/app/src/main/res/layout/activity_recycler_view.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/itstart/Desktop/AndroidDevHW_2/AndroidDevHW_2/app/src/main/res/layout/activity_register.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/itstart/Desktop/AndroidDevHW_2/AndroidDevHW_2/app/src/main/res/layout/activity_rx_acitivity.xml" value="0.5" />
+        <entry key="..\:/Users/itstart/Desktop/AndroidDevHW_2/AndroidDevHW_2/app/src/main/res/layout/activity_rx_acitivity.xml" value="0.43924191750278707" />
         <entry key="..\:/Users/itstart/Desktop/AndroidDevHW_2/AndroidDevHW_2/app/src/main/res/layout/activity_rx_register.xml" value="0.2421875" />
         <entry key="..\:/Users/itstart/Desktop/AndroidDevHW_2/AndroidDevHW_2/app/src/main/res/layout/activity_service.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/itstart/Desktop/AndroidDevHW_2/AndroidDevHW_2/app/src/main/res/layout/activity_user_recycler.xml" value="0.2796875" />
         <entry key="..\:/Users/itstart/Desktop/AndroidDevHW_2/AndroidDevHW_2/app/src/main/res/layout/custom_dialog.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/itstart/Desktop/AndroidDevHW_2/AndroidDevHW_2/app/src/main/res/layout/fragment_finish.xml" value="0.33" />
         <entry key="..\:/Users/itstart/Desktop/AndroidDevHW_2/AndroidDevHW_2/app/src/main/res/layout/fragment_start.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/itstart/Desktop/AndroidDevHW_2/AndroidDevHW_2/app/src/main/res/layout/recycler_item_comment.xml" value="0.30885416666666665" />
         <entry key="..\:/Users/itstart/Desktop/AndroidDevHW_2/AndroidDevHW_2/app/src/main/res/layout/recycler_view_item.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/itstart/Desktop/AndroidDevHW_2/AndroidDevHW_2/app/src/main/res/layout/recycler_view_user.xml" value="0.2796875" />
         <entry key="..\:/Users/itstart/Desktop/AndroidDevHW_2/AndroidDevHW_2/app/src/main/res/layout/service_layout.xml" value="0.20520833333333333" />

@@ -1,23 +1,21 @@
-package com.example.androiddevhw_2.lesson_7.retrofit
-
+package com.example.androiddevhw_2.lesson_8.retrofit
 
 import com.example.androiddevhw_2.lesson_7.model.Comments
 import com.example.androiddevhw_2.lesson_7.model.User
 import com.example.androiddevhw_2.lesson_7.model.Users
-import io.reactivex.Observable
 import retrofit2.http.Body
 import retrofit2.http.GET
 import retrofit2.http.POST
 
 
-interface ApiService {
+interface CoroutineApiService {
 
     @GET("/public/v1/users")
-    fun getUsers(): Observable<Users>
+   suspend fun getUsers(): Users
 
     @GET("/public/v1/comments")
-    fun getComments(): Observable<Comments>
+    suspend  fun getComments(): Comments
 
     @POST("/public/v1/users")
-    fun CreateUser(@Body user: User):Observable<User>
+    suspend fun CreateUser(@Body user: User):User
 }

@@ -1,7 +1,6 @@
-package com.example.androiddevhw_2.lesson_8
+package com.example.androiddevhw_2.lesson_0
 
 import java.text.SimpleDateFormat
-import java.time.LocalDate
 import java.util.*
 
 class Main {
