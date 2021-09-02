@@ -13,7 +13,8 @@ class CoroutineActivity : AppCompatActivity() {
     // Job это оболочка для задач которые выполняются на бэкграунде
     private lateinit var job: Job    // Main - главный поток
     private val adapter: RecyclerAdapter = RecyclerAdapter()
-    private val coroutineScope = CoroutineScope((Dispatchers.Main + job))
+                                                // Main - главный поток
+
 
     private lateinit var binding: ActivityCoroutineBinding
 
