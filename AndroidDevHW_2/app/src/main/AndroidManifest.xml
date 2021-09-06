@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidDevHW_2">
         <activity
+            android:name=".lesson_9.MVVMActivity"
+            android:exported="true" />
+        <activity
             android:name=".lesson_8.CoroutineActivity"
             android:exported="true" />
         <activity
