@@ -1,6 +1,7 @@
 package com.example.androiddevhw_2.lesson_9
 
 import android.app.Activity
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
@@ -17,8 +18,10 @@ import com.example.androiddevhw_2.R
 import com.example.androiddevhw_2.databinding.ActivityMvvmactivityBinding
 import com.example.androiddevhw_2.lesson_9.state.LoginState
 import com.example.androiddevhw_2.lesson_9.ui.login.LoggedInUserView
+import com.example.androiddevhw_2.lesson_9.ui.login.LoginFormState
 import com.example.androiddevhw_2.lesson_9.ui.login.LoginViewModel
 import com.example.androiddevhw_2.lesson_9.ui.login.LoginViewModelFactory
+import kotlinx.android.synthetic.main.activity_mvvmactivity.*
 
 class MVVMActivity : AppCompatActivity() {
 
@@ -40,12 +43,12 @@ class MVVMActivity : AppCompatActivity() {
             .get(LoginViewModel::class.java)
 
         loginViewModel.state.observe(this, Observer {
+
             when (it) {
                 LoginState.Loading -> {
                     loading.visibility = View.VISIBLE
                 }
                 is LoginState.Success -> {
-
                 }
                 is LoginState.LoginError -> {
                     toggleLoginBtn(false)
@@ -59,72 +62,49 @@ class MVVMActivity : AppCompatActivity() {
                 is LoginState.DataIsValid -> {
                     toggleLoginBtn(true)
                 }
-
             }
+            return@Observer
         })
 
-        loginViewModel.loginFormState.observe(this@MVVMActivity, Observer {
-            val loginState = it ?: return@Observer
+        var flag1 = false
+        var flag2 = false
 
-            login.isEnabled = loginState.isDataValid
+        username.onFocusChangeListener = View.OnFocusChangeListener { v, hasFocus ->
+            if (!hasFocus) {
 
-            if (loginState.usernameError != null) {
-                username.error = getString(loginState.usernameError)
+                flag1 = loginViewModel.emailCheck(
+                    username.text.toString()
+                )
+                if (!flag1) {
+                    LoginFormState(usernameError = R.string.invalid_username)
+
+                    username.error = getString(R.string.invalid_username)
+                }
+
+                loginViewModel.checkData(flag1, flag2)
             }
-
-            if (loginState.passwordError != null) {
-                password.error = getString(loginState.passwordError)
-            }
-
-        })
-
-        loginViewModel.loginResult.observe(this@MVVMActivity, Observer {
-            val loginResult = it ?: return@Observer
-
-            loading.visibility = View.GONE
-            if (loginResult.error != null) {
-                showLoginFailed(loginResult.error)
-            }
-
-            if (loginResult.success != null) {
-                updateUiWithUser(loginResult.success)
-            }
-
-            setResult(Activity.RESULT_OK)
-
-            finish()
-        })
-
-        username.afterTextChanged {
-            loginViewModel.loginDataChanged(
-                username.text.toString(),
-                password.text.toString()
-            )
         }
+
 
         password.apply {
             afterTextChanged {
-                loginViewModel.loginDataChanged(
-                    username.text.toString(),
+                flag2 = loginViewModel.passwordCheck(
                     password.text.toString()
                 )
-            }
-
-            setOnEditorActionListener { _, actionId, _ ->
-                when (actionId) {
-                    EditorInfo.IME_ACTION_DONE ->
-                        loginViewModel.login(
-                            username.text.toString(),
-                            password.text.toString()
-                        )
+                if (!flag2) {
+                    password.error = getString(R.string.invalid_password)
+                }else{
+                    password.error = null
                 }
-                false
+
+                loginViewModel.checkData(flag1, flag2)
             }
 
-            login.setOnClickListener {
-                loading.visibility = View.VISIBLE
-                loginViewModel.login(username.text.toString(), password.text.toString())
-            }
+        }
+
+        login.setOnClickListener {
+            loading.visibility = View.VISIBLE
+            loginViewModel.login(username.text.toString(), password.text.toString())
         }
     }
 

@@ -23,8 +23,45 @@ class LoginViewModel(private val loginRepository: LoginRepository) : ViewModel()
             _state.value = LoginState.AuthenticationError(R.string.login_failed)
         }
     }
+    fun checkData(f1:Boolean, f2:Boolean) {
+        if(f1&&f2){
+            _state.value = LoginState.DataIsValid
+        }
+    }
 
-    fun checkData(){
+    fun emailCheck(email: String): Boolean {
+        return if (!isUserNameValid(email)) {
+            _state.value = LoginState.LoginError(R.string.invalid_username)
+            false
+        } else {
+            // We will make a really good piece of code here
+            // trust me
+
+            true
+        }
+    }
+
+    fun passwordCheck(password: String): Boolean {
+        return if (!isPasswordValid(password)) {
+            _state.value = LoginState.PasswordError(R.string.invalid_password)
+            false
+        } else {
+            // We will make a really good piece of code here
+            // trust me
+            true
+        }
+    }
+
+    private fun isUserNameValid(username: String): Boolean {
+        return if (username.contains('@')) {
+            Patterns.EMAIL_ADDRESS.matcher(username).matches()
+        } else {
+            // username.isNotBlank()
+            false
+        }
+    }
+
+   /* fun checkData(){
 
     }
 
@@ -52,7 +89,7 @@ class LoginViewModel(private val loginRepository: LoginRepository) : ViewModel()
         } else {
             username.isNotBlank()
         }
-    }
+    }*/
 
     private fun isPasswordValid(password: String): Boolean {
         return password.length > 5
