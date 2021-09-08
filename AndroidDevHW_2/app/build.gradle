@@ -1,7 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
-    //id 'androidx.navigation.safeargs.kotlin'
+    id 'androidx.navigation.safeargs.kotlin'
     id 'kotlin-android-extensions'
     id 'kotlinx-serialization'
 
@@ -67,12 +67,27 @@ dependencies {
     // SERIALIZATION 01.09.21
     implementation "org.jetbrains.kotlinx:kotlinx-serialization-runtime-native:0.9.1"
     implementation 'org.jetbrains.kotlinx:kotlinx-serialization-json:1.2.2'
+    implementation 'androidx.vectordrawable:vectordrawable:1.1.0'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.3.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1'
     //
     def nav_version = "2.3.5"
 
     // Kotlin
     implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
     implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+
+    // KTX 08.09.21
+    implementation 'androidx.core:core-ktx:1.6.0'
+
+    // KOIN 08.09.21
+
+    def koin_version = "3.1.2"
+
+    implementation "io.insert-koin:koin-core:$koin_version"
+    implementation "io.insert-koin:koin-android:$koin_version"
+    //implementation "io.insert-koin:koin-android-viewmodel:$koin_version" // она лишняя
+
 
     // Feature module Support
     implementation "androidx.navigation:navigation-dynamic-features-fragment:$nav_version"
