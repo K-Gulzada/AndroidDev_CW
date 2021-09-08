@@ -45,9 +45,16 @@ class PaymentsFragment : Fragment() {
         return inflater.inflate(R.layout.payments_fragment, container, false)
     }
 
-    override fun onStart() {
+  /*  override fun onStart() {
         super.onStart()
         view?.findViewById<TextView>(R.id.payment)?.text = paymentsViewModel.payments.first()
+    }*/
+
+    // после того как во вьюшке поменяли констрэйт на линеар
+
+    override fun onStart() {
+        super.onStart()
+        view?.findViewById<TextView>(R.id.payment)?.text = paymentsViewModel.id.toString()
     }
 
 }
