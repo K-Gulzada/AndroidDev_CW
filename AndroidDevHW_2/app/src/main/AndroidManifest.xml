@@ -13,7 +13,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidDevHW_2">
         <activity
-            android:name=".lesson_9.MVVMActivity"
+            android:name=".test.ui.login.LoginActivity"
+            android:label="@string/title_activity_login"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".lesson_9.MvvmActivity"
             android:exported="true" />
         <activity
             android:name=".lesson_8.CoroutineActivity"

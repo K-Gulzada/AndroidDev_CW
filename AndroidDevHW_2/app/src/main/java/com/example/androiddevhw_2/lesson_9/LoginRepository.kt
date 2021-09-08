@@ -10,26 +10,26 @@ class LoginRepository(val dataSource: LoginDataSource) {
     val isLoggedIn: Boolean
         get() = user != null
 
-    init{
-        user=null
+    init {
+        user = null
     }
 
-    fun logout(){
-        user=null
+    fun logout() {
+        user = null
         dataSource.logout()
     }
 
-    fun login(username:String, password:String):Result<LoggedInUser>{
+    fun login(username: String, password: String): Result<LoggedInUser> {
         val result = dataSource.login(username, password)
 
-        if(result is Result.Success){
+        if (result is Result.Success) {
             setLoggedInUser(result.data)
         }
 
         return result
     }
 
-    private fun setLoggedInUser(loggedInUser: LoggedInUser){
+    private fun setLoggedInUser(loggedInUser: LoggedInUser) {
         this.user = loggedInUser
     }
 }

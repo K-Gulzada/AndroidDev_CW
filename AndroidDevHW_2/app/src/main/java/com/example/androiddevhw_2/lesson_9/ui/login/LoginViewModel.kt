@@ -24,25 +24,32 @@ class LoginViewModel(private val loginRepository: LoginRepository) : ViewModel()
         }
     }
 
-    fun checkData(){
-
-    }
-
-    fun emailCheck(email: String) {
-        if (!isUserNameValid(email)) {
-            _state.value = LoginState.LoginError(R.string.invalid_username)
-        } else {
-            // We will make a really good piece of code here
-            // trust me
+    fun checkData(f1:Boolean, f2:Boolean) {
+        if(f1&&f2){
+            _state.value = LoginState.DataIsValid
         }
     }
 
-    fun passwordCheck(password: String) {
-        if (!isPasswordValid(password)) {
-            _state.value = LoginState.PasswordError(R.string.invalid_password)
+    fun emailCheck(email: String): Boolean {
+        return if (!isUserNameValid(email)) {
+            _state.value = LoginState.LoginError(R.string.invalid_username)
+            false
         } else {
             // We will make a really good piece of code here
             // trust me
+
+            true
+        }
+    }
+
+    fun passwordCheck(password: String): Boolean {
+        return if (!isPasswordValid(password)) {
+            _state.value = LoginState.PasswordError(R.string.invalid_password)
+            false
+        } else {
+            // We will make a really good piece of code here
+            // trust me
+            true
         }
     }
 
@@ -50,7 +57,8 @@ class LoginViewModel(private val loginRepository: LoginRepository) : ViewModel()
         return if (username.contains('@')) {
             Patterns.EMAIL_ADDRESS.matcher(username).matches()
         } else {
-            username.isNotBlank()
+            // username.isNotBlank()
+            false
         }
     }
 
@@ -58,3 +66,9 @@ class LoginViewModel(private val loginRepository: LoginRepository) : ViewModel()
         return password.length > 5
     }
 }
+
+/*      Исправить функционал написанный в классе следующим образом:
+        Когда пользователь выходит из поля логина проверить его,
+        когда пользователь выходит из поля пароля проверить его,
+        кнопка логина должна быть включена только когда оба поля валидны.
+        Использовать mEditText.setOnFocusChangeListener*/

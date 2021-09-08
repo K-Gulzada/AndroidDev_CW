@@ -67,6 +67,9 @@ dependencies {
     // SERIALIZATION 01.09.21
     implementation "org.jetbrains.kotlinx:kotlinx-serialization-runtime-native:0.9.1"
     implementation 'org.jetbrains.kotlinx:kotlinx-serialization-json:1.2.2'
+    implementation 'androidx.annotation:annotation:1.1.0'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.2.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
     //
     def nav_version = "2.3.5"
 
