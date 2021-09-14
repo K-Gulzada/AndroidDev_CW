@@ -54,7 +54,7 @@ class PaymentsFragment : Fragment() {
 
     override fun onStart() {
         super.onStart()
-        view?.findViewById<TextView>(R.id.payment)?.text = paymentsViewModel.id.toString()
+       // view?.findViewById<TextView>(R.id.payment)?.text = paymentsViewModel.id.toString()
     }
 
 }

@@ -15,3 +15,5 @@ val paymentsModule = module {
     // после добавления библиотеки implementation "io.insert-koin:koin-android-viewmodel:$koin_version"
     viewModel{PaymentsViewModel(get())}
 }
+
+

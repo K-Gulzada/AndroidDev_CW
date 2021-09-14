@@ -1,2 +1,4 @@
 include ':app'
 rootProject.name = "AndroidDevHW_2"
+include ':data'
+include ':domain'

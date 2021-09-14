@@ -85,7 +85,7 @@ class StartFragment : Fragment() {
 // 1) activity (контекст UI)
 // 2) broadcast receiver
 // 3) service
-// 4)
+// 4) content provider
 
 
 
