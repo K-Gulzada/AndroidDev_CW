@@ -14,7 +14,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidDevHW_2">
         <activity
+            android:name=".lesson_12.PrefActivity"
+            android:exported="true" />
+        <activity
             android:name=".lesson_11.DaggerActivity"
+            android:exported="true" />
+        <activity
+            android:name=".lesson_12.RoomActivity"
             android:exported="true" />
         <activity
             android:name=".lesson_10.NavigationActivity"
