@@ -25,4 +25,11 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+
+    <!--     17.09.21 widgets-->
+    <string name="fan_off">Off</string>
+    <string name="fan_low">Low</string>
+    <string name="fan_medium">Medium</string>
+    <string name="fan_high">High</string>
+
 </resources>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".lesson_13.WidgetActivity">
+
+    <com.example.androiddevhw_2.lesson_13.widgets.FeedbackWidget
+        android:id="@+id/feedback_widget"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleHint="@string/login_failed"
+        app:btnText="OPEN"
+        app:btnColor="@color/purple_200"
+        app:btnTextSize="36dp"/>
+
+    <com.example.androiddevhw_2.lesson_13.widgets.FanWidget
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/feedback_widget"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -94,6 +94,9 @@ dependencies {
     kapt("androidx.room:room-compiler:$room_version")
     implementation("androidx.room:room-ktx:$room_version")
 
+    // 17.09.21 Paging (Пагинация)
+    implementation("androidx.paging:paging-runtime-ktx:3.0.1")
+
     //
     def nav_version = "2.3.5"
 

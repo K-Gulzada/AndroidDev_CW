@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/feedback_title"
+        android:layout_width="391dp"
+        android:layout_height="43dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
+
+    <ImageView
+        android:id="@+id/feedback_title_end_icon"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_marginEnd="6dp"
+        android:src="@drawable/ic_dragon"
+        app:layout_constraintBottom_toBottomOf="@+id/feedback_title"
+        app:layout_constraintEnd_toEndOf="@+id/feedback_title"
+        app:layout_constraintTop_toTopOf="@+id/feedback_title"
+
+        />
+
+    <Button
+        android:id="@+id/feedback_btn"
+        android:layout_width="390dp"
+        android:layout_height="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/feedback_title"
+        tools:text="TEST" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

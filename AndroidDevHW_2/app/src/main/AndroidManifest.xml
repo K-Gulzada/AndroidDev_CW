@@ -14,6 +14,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidDevHW_2">
         <activity
+            android:name=".lesson_13.ViewPagerActivity"
+            android:exported="true" />
+        <activity
+            android:name=".lesson_13.WidgetActivity"
+            android:exported="true" />
+        <activity
             android:name=".lesson_12.PrefActivity"
             android:exported="true" />
         <activity

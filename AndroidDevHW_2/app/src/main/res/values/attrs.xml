@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="FeedbackWidget">
+        <attr name="titleHint" format="string"/>
+        <attr name="btnText" format="string"/>
+        <attr name="btnColor" format="color"/>
+        <attr name="btnTextSize" format="dimension"/>
+    </declare-styleable>
+
+</resources>
