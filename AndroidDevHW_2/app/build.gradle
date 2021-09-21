@@ -5,6 +5,8 @@ plugins {
     id 'kotlin-android-extensions'
     id 'kotlinx-serialization'
     id 'kotlin-kapt'
+    id 'com.google.gms.google-services'
+    id 'com.google.firebase.crashlytics'
 
 }
 
@@ -96,6 +98,28 @@ dependencies {
 
     // 17.09.21 Paging (Пагинация)
     implementation("androidx.paging:paging-runtime-ktx:3.0.1")
+
+    //20.09.21 (работа с камерой)
+    // ViewModel and LiveData
+    implementation "androidx.lifecycle:lifecycle-livedata:2.3.1"
+    implementation "androidx.lifecycle:lifecycle-viewmodel:2.3.1"
+
+// Barcode model dependencies
+    implementation 'com.google.mlkit:barcode-scanning:17.0.0'
+
+// CameraX dependencies
+    implementation "androidx.camera:camera-camera2:1.0.0-beta06"
+    implementation "androidx.camera:camera-lifecycle:1.0.0-beta06"
+    implementation "androidx.camera:camera-view:1.0.0-alpha13"
+
+    // 21.09.21 (тема: аналитика. Firebase)
+    implementation platform('com.google.firebase:firebase-bom:28.4.1')
+
+    // Declare the dependency for the Analytics library
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+    implementation 'com.google.firebase:firebase-crashlytics-ktx'
+    implementation 'com.google.firebase:firebase-config-ktx'
 
     //
     def nav_version = "2.3.5"

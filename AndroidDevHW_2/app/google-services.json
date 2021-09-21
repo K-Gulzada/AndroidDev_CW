@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "322136521993",
+    "project_id": "academystep-60d1c",
+    "storage_bucket": "academystep-60d1c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:322136521993:android:92dfad0d92624480ada7d8",
+        "android_client_info": {
+          "package_name": "com.example.androiddevhw_2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "322136521993-2ecjsci346d1uabtlm66dj0l5cp4dlk6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.androiddevhw_2",
+            "certificate_hash": "a3f6948eadfa617827d139e23397a69a81a88d9f"
+          }
+        },
+        {
+          "client_id": "322136521993-ltmekqfaitu088sj63ce07fon0c16j8e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDPiwp43kGCI4gwbf5V9YjuJnAWR8aAJ00"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "322136521993-ltmekqfaitu088sj63ce07fon0c16j8e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

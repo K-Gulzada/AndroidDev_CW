@@ -3,6 +3,7 @@ package com.example.androiddevhw_2
 import android.app.Application
 import com.example.androiddevhw_2.lesson_10.module.paymentsModule
 import com.example.androiddevhw_2.lesson_12.room.Repository
+import com.example.androiddevhw_2.lesson_15.Analytics
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
@@ -23,5 +24,8 @@ class App : Application() {
 
         // 15.09.21 Room / database
         Repository.initialize(this)
+
+        // 21.09.21 Firebase
+        Analytics.init()
     }
 }
