@@ -17,6 +17,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidDevHW_2">
         <activity
+            android:name=".lesson_16.SecondActivity"
+            android:exported="true" />
+        <activity
+            android:name=".lesson_16.BaseActivity"
+            android:exported="true" />
+        <activity
             android:name=".lesson_15.FirebaseActivity"
             android:exported="true" />
         <activity
